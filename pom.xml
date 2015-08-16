@@ -27,23 +27,31 @@
                         <phase>verify</phase>
                         <goals>
                             <goal>jmeter</goal>
-                        </goals>
-						  <configuration>
-              <inputFile>${project.build.directory}/target/jmeter/report/TestForMaven.jtl</inputFile>
-              <graphs>
-                <graph>
-                  <pluginType>ThreadsStateOverTime</pluginType>
-                  <width>800</width>
-                  <height>600</height>
-                  <outputFile>${project.build.directory}/target/jmeter/report/TestForMaven-ThreadsStateOverTime.png</outputFile>
-                </graph>
-                <!-- ... you can declare more <graph>-elements here -->
-              </graphs>
-            </configuration>
-						 
+                        </goals>						 
                     </execution>
                 </executions>
             </plugin>
+			 <build>
+    <plugins>
+      <plugin>
+        <groupId>de.codecentric</groupId>
+        <artifactId>jmeter-graph-maven-plugin</artifactId>
+        <version>0.1.0</version>
+        <configuration>
+          <inputFile>${project.build.directory}/target/jmeter/report/TestForMaven.jtl</inputFile>
+          <graphs>
+            <graph>
+              <pluginType>ThreadsStateOverTime</pluginType>
+              <width>800</width>
+              <height>600</height>
+              <outputFile>${project.build.directory}/jmeter/results/TestForMaven-ThreadsStateOverTime.png</outputFile>
+            </graph>
+            <!-- ... you can declare more <graph>-elements here -->
+          </graphs>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
         </plugins>
     </build>
 	 
