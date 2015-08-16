@@ -15,6 +15,7 @@
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>1.4.1</version>
 				   <configuration>
+				   <reportDir>${basedir}/target/jmeter/report</reportDir>
                                 <resultsFileFormat>xml</resultsFileFormat>
 								<ignoreResultFailures>true</ignoreResultFailures>
 								<appendResultsTimestamp>false</appendResultsTimestamp>
@@ -30,9 +31,7 @@
                         </goals>						 
                     </execution>
                 </executions>
-				<configuration>
-				<reportDir>${basedir}/target/jmeter/report</reportDir>
-			</configuration>
+			
             </plugin>
 			
     
