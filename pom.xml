@@ -30,6 +30,11 @@
                         </goals>						 
                     </execution>
                 </executions>
+				<configuration>
+				<reportDir>
+					${basedir}/target/jmeter/report
+				</reportDir>
+			</configuration>
             </plugin>
 			
     
