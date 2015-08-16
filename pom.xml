@@ -25,10 +25,12 @@
                                 <resultsFileFormat>xml</resultsFileFormat>
 								<ignoreResultFailures>true</ignoreResultFailures>
 								<appendResultsTimestamp>false</appendResultsTimestamp>
+								 <resultsFileNameDateFormat></resultsFileNameDateFormat>
                             </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
+	 
 </project>
