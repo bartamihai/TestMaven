@@ -21,6 +21,11 @@
                         <goals>
                             <goal>jmeter</goal>
                         </goals>
+						    <configuration>
+                                <resultsFileFormat>xml</resultsFileFormat>
+								<ignoreResultFailures>true</ignoreResultFailures>
+								<appendResultsTimestamp>false</appendResultsTimestamp>
+                            </configuration>
                     </execution>
                 </executions>
             </plugin>
